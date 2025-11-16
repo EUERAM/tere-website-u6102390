@@ -564,6 +564,16 @@ header a{
     text-align: left;
 }
 
+/* Image placed to the right of the text for card-01 */
+.card-01 .benefit-image-after {
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-left: 24px; /* space between text and image */
+}
+
 /* When images are removed, push the text as far left as possible for cards 01 and 03 */
 .card-01 .benefit-item,
 .card-03 .benefit-item {

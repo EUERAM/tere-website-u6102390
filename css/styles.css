@@ -119,6 +119,62 @@ header a{
 }
 
 /* Secció How Tere works */
+.how-title {
+    font-size: 48px;
+    font-family: "Inter";
+    font-weight: 900;
+    font-style: normal;
+    line-height: 50.35px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.how-subtitle {
+    font-size: 18px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 26px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    color: var(--light-gray);
+    width: 620px;
+    margin: auto auto 40px auto;
+}
+
+.how-image-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.how-image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.how-works-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.how-column {
+    flex: 1;
+}
+
+.how-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .how-it-works .row{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -223,4 +279,478 @@ header a{
 .hero-image img {
     width: 100%;
     height: auto;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.step-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.step-number {
+    font-family: "Inter";
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--green);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.benefits-title {
+    font-size: 48px;
+    font-family: "Inter";
+    font-weight: 900;
+    font-style: normal;
+    line-height: 50.35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+/* Decorative number for Benefits section */
+.benefits-number {
+    font-family: "Inter";
+    font-weight: 500; /* Inter Medium */
+    font-size: 88px;
+    line-height: 1;
+    color: var(--green);
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* Benefits row: number at left, content at right */
+.benefits-row {
+    display: flex;
+    align-items: center; /* vertically center image with text */
+    justify-content: flex-start; /* place row to the left */
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.benefits-number {
+    flex: 0 0 auto;
+    text-align: left;
+    margin-top: 4px; /* slightly align with heading */
+}
+
+.benefits-content {
+    max-width: 760px;
+    text-align: left;
+}
+
+.benefit-title {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--black);
+    margin: 0 0 8px 0;
+}
+
+.benefit-subtitle {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--light-gray);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Benefit image on the right */
+.benefits-image-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.benefits-image-wrapper {
+    margin-left: auto; /* push image to the right */
+    padding-left: 8px; /* tighter separation from text */
+}
+
+.benefit-image {
+    width: 160px; /* smaller image */
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Benefits-alt left text block */
+.benefits-alt-row {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.benefits-alt-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    flex: 1 1 auto;
+}
+
+.benefits-alt-image {
+    flex: 0 0 auto;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px; /* legacy: not used by three-cols layout */
+}
+
+.benefit-image-alt {
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+.alt-number {
+    font-family: "Inter";
+    font-weight: 500; /* Inter Medium */
+    font-size: 88px;
+    line-height: 1;
+    color: var(--green);
+}
+
+.alt-text {
+    font-family: "Inter";
+    font-weight: 400; /* Inter Regular */
+    font-size: 33.94px;
+    line-height: 1.1;
+    color: var(--black);
+}
+
+.alt-text-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.alt-subtitle {
+    font-family: "Inter";
+    font-weight: 500; /* Inter Medium */
+    font-size: 18px;
+    line-height: 1.4;
+    color: #9E9DA2;
+    margin: 6px 0 0 0;
+}
+
+.benefits-alt-underimg {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 96px;
+}
+
+/* Three-column layout for benefits: image + number/text aligned */
+.benefits-alt-row.three-cols {
+    display: flex;
+    gap: 40px;
+}
+
+.benefit-column {
+    flex: 1 1 0;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Ensure images are always on the left of their text for all benefit cards */
+.benefit-item {
+    flex-direction: row; /* image then text */
+}
+.benefit-image-alt {
+    order: 0;
+    margin-right: 28px; /* spacing between image and text */
+}
+.benefit-text {
+    order: 1;
+}
+
+.benefit-text {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Grid layout: place 01 at (1,1), 02 at (2,2), 03 at (2,3) */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 40px;
+    align-items: start;
+}
+
+.benefit-card {
+    display: block;
+}
+
+.benefit-card .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Ensure image appears at left for card-01 and card-03 */
+.card-01 .benefit-item,
+.card-03 .benefit-item {
+    flex-direction: row; /* image then text */
+}
+.card-01 .benefit-image-alt,
+.card-03 .benefit-image-alt {
+    order: 0;
+}
+.card-01 .benefit-text,
+.card-03 .benefit-text {
+    order: 1;
+}
+
+/* Explicit spacing for images on the left of their texts */
+.card-01 .benefit-image-alt,
+.card-03 .benefit-image-alt {
+    margin-right: 28px; /* space between image and text */
+}
+
+.card-01 { grid-column: 1 / 2; grid-row: 1 / 2; }
+.card-02 { grid-column: 2 / 3; grid-row: 2 / 3; }
+.card-03 { grid-column: 3 / 4; grid-row: 2 / 3; }
+
+/* Separate the 02 number from its text block and center the number */
+.card-02 .benefit-text {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.card-02 .alt-number {
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 88px; /* fixed box for the number */
+    flex: 0 0 88px;
+    margin-right: 12px;
+}
+.card-02 .alt-text-block {
+    flex: 1 1 auto;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    text-align: left;
+}
+
+/* When images are removed, push the text as far left as possible for cards 01 and 03 */
+.card-01 .benefit-item,
+.card-03 .benefit-item {
+    padding-left: 0; /* remove any left gutter reserved for an image */
+    gap: 8px; /* reduce gap since image is gone */
+    justify-content: flex-start;
+}
+.card-01 .benefit-text,
+.card-03 .benefit-text {
+    margin-left: 0;
+}
+.card-01 .alt-number,
+.card-03 .alt-number {
+    margin-right: 8px; /* tighten number/text spacing */
+}
+
+/* Stronger rules to force flush-left alignment for cards without images */
+.card-01 .benefit-item,
+.card-03 .benefit-item {
+    width: 100% !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    gap: 6px !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+}
+.card-01 .benefit-text,
+.card-03 .benefit-text {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+}
+.card-01 .alt-number,
+.card-03 .alt-number {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px !important;
+}
+
+/* Center the numeric badges for card-01 and card-03 */
+.card-01 .alt-number,
+.card-03 .alt-number {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    text-align: left !important;
+}
+
+/* Additional stronger rules: remove any container gutters and make 01/03 flush with the container left */
+.card-01, .card-03 {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+.card-01 .benefit-item, .card-03 .benefit-item {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+}
+.card-01 .alt-text-block, .card-03 .alt-text-block {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+.card-01 .alt-number, .card-03 .alt-number {
+    margin-left: 0 !important;
+    margin-right: 12px !important;
+    text-align: left !important;
+}
+.card-01 .alt-text, .card-03 .alt-text {
+    display: block !important;
+    text-align: left !important;
+}
+
+/* Stacked layout (vertical) */
+.benefits-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 200px;
+}
+
+.benefit-underimg-icon {
+    width: 160px; /* match Benefit 1 image */
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-right: 24px; /* extra separation from the 02. block */
+}
+
+.benefit-underimg-icon-right {
+    width: 160px; /* match other benefit images */
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-left: 24px; /* separation from the 03. block */
+}
+
+/* Full-width image below benefit 1 */
+.benefits-image-below {
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+
+.benefit-image-full {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Footer */
+.site-footer {
+    padding: 32px 0 200px; /* top/right/bottom: add 200px bottom space from separator to page bottom */
+}
+.site-footer .footer-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.footer-left {
+    flex: 0 0 auto;
+    margin-right: 60px; /* space between Logo 2 and the "Be our friend" block */
+}
+.footer-logo {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+.footer-right {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.footer-right-duplicate {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.footer-downloads {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.footer-download-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.footer-download-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-friend-title {
+    font-family: "Inter";
+    font-weight: 800; /* extra bold */
+    font-size: 22px;
+    color: var(--black);
+    margin-bottom: 6px;
+}
+
+.footer-contact p {
+    margin: 2px 0;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--light-gray);
+}
+
+/* Footer separator and small centered subtitle */
+.footer-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #E6E6E6;
+    margin-top: 24px;
+}
+
+.footer-subtitle {
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 14px;
+    color: #9E9DA2;
+    margin-top: 12px;
+    width: 100%;
 }

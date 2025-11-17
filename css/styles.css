@@ -114,6 +114,22 @@ header a{
     line-height: 26px; /* 144.444% */
     text-decoration: none; /* treure subratllat */
 }
+
+/* Header green button (Help center) */
+header .menu .green-btn {
+    padding: 8px 16px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+header .menu .green-btn:hover {
+    filter: brightness(0.95);
+}
 .green{
     color: var(--green);
 }
@@ -156,6 +172,16 @@ header a{
     height: auto;
 }
 
+/* Small decorative dots under the works image */
+.how-image-container .works-dots {
+    display: block;
+    margin: 12px auto 0 auto;
+    width: 66.09px; /* exact requested width */
+    height: 12.77px; /* exact requested height */
+    object-fit: contain;
+    opacity: 0.95;
+}
+
 .how-works-row {
     display: flex;
     justify-content: space-between;
@@ -171,8 +197,10 @@ header a{
 .how-image-container {
     flex: 1;
     display: flex;
+    flex-direction: column; /* stack images vertically */
     justify-content: center;
     align-items: center;
+    gap: 12px; /* small gap between works.png and dots.png */
 }
 
 .how-it-works .row{
@@ -216,6 +244,13 @@ header a{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Ensure the Apply to Drive button keeps the hero black style when inside the link input group */
+.link-input-group .hero-btn {
+    background-color: var(--black);
+    color: white;
+    border: none;
 }
 
 /* Secció Hero */

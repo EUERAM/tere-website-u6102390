@@ -287,6 +287,130 @@ header a{
     gap: 20px;
 }
 
+/* Small vertical spacing between steps (1,2,3,4) inside each column */
+.how-column .step {
+    margin-bottom: 32px;
+}
+.how-column .step:last-child {
+    margin-bottom: 0;
+}
+
+/* When the number is placed above the heading (inside .step-text) override absolute rules */
+.step-text .step-number {
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 0 6px 0;
+    font-family: "Inter";
+    font-weight: 800; /* ExtraBold */
+    font-size: 34.11px;
+    line-height: 1;
+    color: var(--green);
+    display: block;
+}
+
+/* keep the original absolute style for any .step-number that may remain in .step-wrapper */
+.step-wrapper .step-number {
+    position: absolute;
+}
+
+/* When step-image is inside .step-text place it above the number and center it */
+.step-text .step-image {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Center image and number with the heading block */
+.step-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Badge container: position relative so number can be centered over the image */
+.step-badge {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.step-badge .step-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.step-badge .step-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-family: "Inter";
+    font-weight: 800; /* ExtraBold */
+    font-size: 34.11px;
+    color: var(--green);
+    z-index: 10; /* ensure number renders above the image */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    line-height: 1;
+}
+
+/* Force absolute positioning when inside .step-badge to override earlier rules */
+.step-badge .step-number {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 10 !important;
+}
+
+/* Keep a fallback for any existing absolute positioned numbers in the wrapper */
+.step-wrapper .step-number {
+    position: absolute;
+}
+
+/* Optionally center the marker column on smaller screens */
+@media (max-width: 700px) {
+    .how-works-row {
+        flex-direction: column;
+    }
+    .how-column .step {
+        align-items: flex-start;
+    }
+    .step-text .step-image {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 4px;
+    }
+    .how-column .step {
+        margin-bottom: 20px;
+    }
+}
+
+/* Ensure heading and its subtitle are grouped vertically */
+.step-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-subtitle {
+    margin: 0 0 4px 0; /* reduced gap under H3 before subtitle text */
+}
+
+/* Remove default paragraph margins inside the step-text so subtitle sits close to H3 */
+.how-it-works .step-text .normal {
+    margin: 0; /* no extra top/bottom gap */
+}
+
 .step-wrapper {
     position: relative;
     width: 80px;
@@ -402,6 +526,16 @@ header a{
     justify-content: space-between;
     gap: 24px;
     margin-top: 20px;
+}
+
+/* Position container relative so we can place images at the right edge */
+.benefits-alt > .container {
+    position: relative;
+}
+
+/* Make each benefit card the positioning context so its image can be aligned to its right edge */
+.benefit-card {
+    position: relative;
 }
 
 .benefits-alt-left {
@@ -572,6 +706,38 @@ header a{
     border-radius: 6px;
     display: block;
     margin-left: 24px; /* space between text and image */
+}
+
+/* General rule for images placed to the right of their text */
+.benefit-image-after {
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-left: 24px;
+}
+
+/* Place the benefit images at the right edge of the container (floating to the right side of the web) */
+.card-01 .benefit-image-after,
+.card-03 .benefit-image-after {
+    position: absolute;
+    right: 0; /* align to the right edge of the card (and thus the container) */
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+}
+
+/* On small screens place images back inline under their text */
+@media (max-width: 900px) {
+    .card-01 .benefit-image-after,
+    .card-03 .benefit-image-after {
+        position: static;
+        display: block;
+        margin-left: 24px;
+        top: auto;
+        right: auto;
+    }
 }
 
 /* When images are removed, push the text as far left as possible for cards 01 and 03 */
